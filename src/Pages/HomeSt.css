@@ -1,0 +1,25 @@
+.Intro{
+    /* padding: 100px 0; */
+}
+.Intro .col-6:first-child{
+    background-color: antiquewhite;
+}
+.Intro-x{
+    margin-bottom: 40px;
+    line-height: 0.9;
+}
+.Intro-x h1{
+    font-weight: 400;
+    font-size: 35px;
+}
+.Intro-x span{
+    font-size: 36px;
+    font-weight: 600;
+}
+.Intro-xx{
+    margin-bottom: 20px;
+    display: block;
+}
+.Intro-xx span{
+    font-size: 18px;
+}

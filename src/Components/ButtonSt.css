@@ -1,0 +1,23 @@
+.bttn{
+    background:linear-gradient(45deg , #8de1f47b , #0fada8ea 60%);
+    border: 0;
+    background-repeat: no-repeat;
+    padding: 12px 23px;
+    position: relative;
+    overflow: hidden;
+    color: white;
+    border-radius: 10px 5px 10px 5px ;
+    z-index: 1;
+}
+.bttn::after{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 0;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.058);
+    transition: all 0.5s;
+}
+.bttn:hover::after{
+    width: 100%;
+}

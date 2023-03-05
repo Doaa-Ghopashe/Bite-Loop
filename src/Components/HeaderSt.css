@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/*----Main-logo----*/
+.brand{
+    display: block;
+    padding: 10px 0;
+}
+.navbar-logo{
+    width: 30%;
+}
+/*------------------*/
+header{
+    position: sticky;
+    padding: 10px 0;
+    width: 100%;
+    background-color: #fff;
+}
+.header-container{
+    width: 70%;
+    margin: auto;
+}
+.nav-navbar , .collapsed-links , .navbar-list , .drop-link , .drop-menu{
+    display: flex;
+}
+.nav-navbar{
+    justify-content: space-between;
+    align-items: center;
+}
+.collapsed-links{
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+}
+.navbar-list{
+    list-style: none;
+    margin: 0;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.active a{
+    color:#e30613 !important
+}
+.nav-link a , .nav-btn{
+    text-decoration: none;
+    padding: 0 15px ;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    color: #2E2E2E;
+    text-transform: capitalize;
+
+    transition: all 0.1s;
+    justify-content: center;
+    align-items: baseline;
+}
+.navbar-list .bttn{
+    background: -webkit-linear-gradient(45deg, #e30613, #850b13);
+    border-radius: 5px;
+    transition: all 0.5s;
+}
+.navbar-list .bttn a{
+    color: white;
+    text-decoration: none;
+}
+.drop-link span{
+    margin-right:8px ;
+}
+
+.list-item{
+    display: block;
+    color:black;
+    white-space: nowrap;
+    font-size:14px;
+    padding: 5px 0;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+/**/
+.padd{
+    padding: 5px 12px;
+}
+.drop-menu h5{
+    color:#475467;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: start;
+    margin-bottom: 16px;
+} 
+.right-links{
+    width: 30%;
+    display: none;
+    align-items: center;
+    justify-content: space-around;
+}
+.bar{
+    background-color: rgb(0, 0, 0);
+    height: 4px;
+    border-radius: 40px;
+    margin: 4px 0;
+    width: 25px;
+    transition: all 0.5s;
+}
+.centeral-links{
+    transform: translateX(-2000px);
+    position: fixed;
+    /* inset:0; */
+    height: 85vh;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    /* top:65px; */
+    background-color: rgba(247, 247, 247, 0.497);
+    backdrop-filter: blur(10px);
+    transition: all 0.5s;
+}
+.centeral-links .navbar-list{
+    flex-direction: column;
+    padding: 0 30px;
+}
+.centeral-links .navbar-list li{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+.centeral-links .nav-link{
+    justify-content: space-between;
+    width: 100%;
+    padding: 25px 0;
+    border-bottom: 1px dashed black;
+    font-weight: 600;
+    line-height: 24px;
+}
+.centeral-links .navbar-list li:last-child .nav-link{
+    border-bottom: 0;
+}
+.centeral-links .drop-menu{
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    transition: all 1s;
+}
+.togglecollapsedlinks{
+    transform: translate(0);
+}
+.hoveredbar{
+    background-color: #e30613;
+    top: 0;
+    bottom: 0;
+}
+.hoveredbar:nth-child(1){
+    transform:rotate(45deg);
+    position: absolute;
+}
+.hoveredbar:nth-child(2){
+    transform:translateX(300px)
+}
+.hoveredbar:nth-child(3){
+    position: absolute;
+    transform:rotate(-45deg)
+}
+.navbar-togglebtn{
+    border: 0;
+    background-color: transparent;
+    position: relative;
+}
+.btns{
+    display: flex;
+    width: 50%;
+    margin: auto;
+    flex-direction: column;
+}
+/*---------------*/
+.navbar-list .nav-link:hover a{
+    color:#e30613
+}
+.navbar-list .nav-btn:hover a{
+    color:white;
+}
+.navbar-list .nav-btn:hover {
+    background-size: 200px;
+}
+.list-item:hover{
+    background-color: #f5f5f5;
+}
+.centeral-links .navbar-list li:hover  .drop-menu{
+    height: auto;
+}
+/*responsive*/
+
+@media screen and (max-width:1200px) {
+    .nav-navbar{
+        justify-content: space-between;
+    }
+    .collapsed-links{
+        display: none;
+    }
+    .right-links{
+        display: flex;
+    }
+}
+@media screen and (max-width:992px) {
+    .centeral-links {
+        height: 87vh;
+    }
+}
+@media screen and (max-width:786px) {
+    .centeral-links {
+        height: 89vh;
+    }
+}
+@media screen and (max-width:600px) {
+    .centeral-links {
+        height: 90vh;
+    }
+    .navbar-logo {
+        width: 40%;
+    }
+}
+@media screen and (max-width:400px) {
+    .centeral-links {
+        height: 91vh;
+    }
+    .navbar-logo {
+        width: 50%;
+    }
+    .padd{
+        padding: 0;
+    }
+}
